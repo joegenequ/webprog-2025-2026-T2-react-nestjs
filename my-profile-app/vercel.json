@@ -16,6 +16,7 @@
   ],
   "routes": [
     { "src": "/api/(.*)", "dest": "/backend/src/main.ts" },
-    { "src": "/(.*)", "dest": "/frontend/index.html" }
+    { "src": "/(.*)\\.(?:js|css|png|jpg|jpeg|svg|ico|webp|woff|woff2|ttf|eot)$", "continue": true },
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
