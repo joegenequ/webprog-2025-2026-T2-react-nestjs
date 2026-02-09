@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "outputDirectory": "frontend/dist",
   "builds": [
     {
       "src": "frontend/package.json",
@@ -10,13 +9,14 @@
       }
     },
     {
-      "src": "backend/src/**/*.ts",
+      "src": "backend/package.json",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     { "src": "/api/(.*)", "dest": "/backend/src/main.ts" },
     { "src": "/(.*)\\.(?:js|css|png|jpg|jpeg|svg|ico|webp|woff|woff2|ttf|eot)$", "continue": true },
-    { "src": "/(.*)", "dest": "/index.html" }
+    { "src": "/frontend/(.*)", "dest": "/frontend/dist/$1" },
+    { "src": "/(.*)", "dest": "/frontend/dist/index.html" }
   ]
 }
