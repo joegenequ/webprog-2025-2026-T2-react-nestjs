@@ -7,7 +7,7 @@
       "use": "@vercel/static-build",
       "config": {
         "distDir": "frontend/dist",
-        "buildCommand": "npm run build --workspace=frontend"
+        "buildCommand": "npm run build:frontend"
       }
     },
     {
