@@ -44,3 +44,4 @@ lerna-debug.log*
 /ormconfig.json
 .codegpt
 *.tsbuildinfo
+package-lock.json
